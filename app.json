@@ -1,30 +1,43 @@
 {
-  "expo": {
-    "name": "UniCheckApp",
-    "slug": "UniCheckApp",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "expo": {
+      "name": "UniCheck",
+      "slug": "unicheck",
+      "scheme": "unicheck",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",
+      "userInterfaceStyle": "light",
+      "newArchEnabled": true,
+      "splash": {
+        "image": "./assets/splash-icon.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#0D2A5C"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "ios": {
+        "supportsTablet": false,
+        "bundleIdentifier": "com.unicheck.app"
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+          "backgroundColor": "#0D2A5C"
+        },
+        "package": "com.unicheck.app",
+        "edgeToEdgeEnabled": true,
+        "predictiveBackGestureEnabled": false
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
+      },
+      "plugins": [
+        "expo-router",
+        [
+          "expo-camera",
+          {
+            "cameraPermission": "O UniCheck precisa da câmera para escanear o QRCode de presença."
+          }
+        ],
+        "expo-sqlite"
+      ]
     }
   }
-}

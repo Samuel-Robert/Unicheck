@@ -1,6 +1,6 @@
-import { email, z } from 'zod';
+import { z } from 'zod';
 
-export const loginschema = z.object({
+export const loginSchema = z.object({
     email: z.string().email('E-mail inválido'),
     senha: z.string().min(6, 'A senha deve conter no mínimo 6 caracteres'),
 });                                                                                             

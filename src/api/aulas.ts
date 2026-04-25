@@ -14,6 +14,7 @@ export async function iniciarAulaApi(dados: IniciarAulaRequest): Promise<Aula> {
   return data;
 
   // Lista de aulas de uma disciplina
-  export async function listarAulasApi(disciplinaId: string): Promise<Aula[]> {
+ export async function listarAulasApi(disciplinaId: string): Promise<Aula[]> {
   const { data } = await api.get<Aula[]>(`/aulas/disciplina/${disciplinaId}`);
   return data;
+}

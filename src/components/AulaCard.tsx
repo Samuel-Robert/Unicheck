@@ -1,3 +1,4 @@
+
 import { View, Text, StyleSheet } from 'react-native';
 import { Card } from './ui/Card';
 import { Badge } from './ui/Badge';
@@ -8,7 +9,7 @@ import { formatarData, formatarHora } from '../utils/formatters';
 
 interface AulaCardProps {
   aula:      Aula;
-  onPress?:  () => void;   // opcional: se passado, card é clicável
+  onPress?:  () => void;   // opcional, se passado, card é clicável
 }
 
 export function AulaCard({ aula, onPress }: AulaCardProps) {

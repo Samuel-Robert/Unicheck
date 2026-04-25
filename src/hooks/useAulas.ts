@@ -97,7 +97,7 @@ export function useAulas(disciplinaId: string) {
 
   // ─── Encerrar Aula ─────────────────────────────────────────
   async function encerrarAula(aulaId: string): Promise<void> {
-    // Atualiza localmente IMEDIATAMENTE (não espera a API)
+    // Atualiza localmente IMEDIATAMENTE (ele não espera a API)
     // Isso garante UX responsiva — o usuário não espera
     encerrarAulaLocal(aulaId);   // UPDATE aulas SET ativa = 0
     setAulaAtiva(null);
